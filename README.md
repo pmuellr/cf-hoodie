@@ -5,34 +5,6 @@ package to make it easy to run <http://hood.ie/> on Cloud Foundry
 
 
 
-quick start - run locally
-================================================================================
-
-* install hood.ie (you may need/want a `sudo` in front of this)
-
-    $ npm install -g hoodie-cli
-
-* create a new hoodie app
-
-    $ hoodie new my-app-name
-
-* cd into your new hoodie app's directory
-
-    $ cd my-app-name
-
-* install this package
-
-    $ npm install cf-hoodie --save
-
-* run with the cf-hoodie program
-
-    $ node_modules/.bin/cf-hoodie start
-
-
-
-
-
-
 quick start - run on Bluemix
 ================================================================================
 
@@ -51,10 +23,6 @@ quick start - run on Bluemix
 * install this package
 
     $ npm install cf-hoodie --save
-
-* get a list of the Cloud Foundry services available
-
-    $ cf marketplace
 
 * create a CouchDB service named `hoodie-data`
 
@@ -86,7 +54,7 @@ quick start - run on Bluemix
     $ cf map-route tmp-app mybluemix.net -n tmp-app-pjm-admin
 
 * visit the hoodie site at <http://tmp-app-pjm.mybluxmix.net> and the
-  admin site at <http://tmp-app-pjm.mybluxmix.net/admin>
+  admin site at <http://tmp-app-pjm-admin.mybluxmix.net>
 
 
 

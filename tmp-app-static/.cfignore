@@ -1,0 +1,5 @@
+data
+node_modules/hoodie-plugin-appconfig
+node_modules/hoodie-plugin-email
+node_modules/hoodie-plugin-users
+node_modules/hoodie-server

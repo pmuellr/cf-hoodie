@@ -1,0 +1,9 @@
+---
+applications:
+- name: tmp-app
+  host: tmp-app-pjm
+  memory: 128M
+  command: node node_modules/.bin/cf-hoodie start
+  services:
+  - hoodie-data-iris
+  - hoodie-admin

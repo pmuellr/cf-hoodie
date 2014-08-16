@@ -20,7 +20,7 @@ tasks = defineTasks exports,
   build: "build the server"
   test:  "run tests"
 
-WatchSpec = "lib lib/**/*"
+WatchSpec = "lib lib/**/* tmp-app-static tmp-app-static/**/*"
 
 #-------------------------------------------------------------------------------
 mkdir "-p", "tmp"
@@ -43,6 +43,9 @@ tasks.build = ->
     exec "npm install .. --save"
   finally
     cd ".."
+
+  cp "-f", "tmp-app-static/*",  tmpAppDir
+  cp "-f", "tmp-app-static/.*", tmpAppDir
 
 #-------------------------------------------------------------------------------
 tasks.watch = ->
