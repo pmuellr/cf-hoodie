@@ -1,0 +1,29 @@
+envConfig: {
+  default_file: '/Users/pmuellr/Projects/cf-hoodie/tmp-app/www/index.html',
+  project_dir: '/Users/pmuellr/Projects/cf-hoodie/tmp-app',
+  www_root: '/Users/pmuellr/Projects/cf-hoodie/tmp-app/www',
+  admin_root: '/Users/pmuellr/Projects/cf-hoodie/tmp-app/node_modules/hoodie-server/node_modules/hoodie-admin-dashboard/www',
+  host: '127.0.0.1',
+  app: {package.json},
+  domain: 'dev',
+  verbose: false,
+  local_tld: undefined,
+  platform: 'darwin',
+  boring: false,
+  id: 'tmp-app',
+  hoodie:
+   { env: '{...}',
+     app_path: '/Users/pmuellr/Projects/cf-hoodie/tmp-app',
+     data_path: '/Users/pmuellr/Projects/cf-hoodie/tmp-app/data' },
+  couch:
+   { run: true,
+     port: '6056',
+     url: 'http://127.0.0.1:6056',
+     host: '127.0.0.1' },
+  open_browser: true,
+  www_port: 6054,
+  admin_port: 6055,
+  www_link: [Function],
+  admin_link: [Function],
+  admin_password: "<prompted text>"
+}

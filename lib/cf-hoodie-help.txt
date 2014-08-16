@@ -1,0 +1,17 @@
+%PROGRAM% - %DESCRIPTION%
+
+This program is a front end for the `hoodie` command.  When the `start`
+parameter is used, this will invoke hoodie configured for use with
+Cloud Foundry.
+
+usage:
+
+  %PROGRAM% [opts]
+
+where opts:
+
+    -v --verbose            generate verbose messages
+    -h --help               print this help
+
+homepage: %HOMEPAGE%
+version:  %VERSION%
