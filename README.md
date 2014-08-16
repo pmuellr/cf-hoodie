@@ -10,48 +10,48 @@ quick start - run on Bluemix
 
 * install hood.ie (you may need/want a `sudo` in front of this)
 
-    $ npm install -g hoodie-cli
+      $ npm install -g hoodie-cli
 
 * create a new hoodie app
 
-    $ hoodie new my-app-name
+      $ hoodie new my-app-name
 
 * cd into your new hoodie app's directory
 
-    $ cd my-app-name
+      $ cd my-app-name
 
 * install this package
 
-    $ npm install cf-hoodie --save
+      $ npm install cf-hoodie --save
 
 * create a CouchDB service named `hoodie-data`
 
-    $ cf create-service cloudantNoSQLDB Shared hoodie-data
+      $ cf create-service cloudantNoSQLDB Shared hoodie-data
 
 * create a user-provided service named `hoodie-admin`
 
-    $ cf create-user-provided-service hoodie-admin -p userid,password
+      $ cf create-user-provided-service hoodie-admin -p userid,password
 
 * create a manifest.yml file with the following contents; the value for the
   `host` property needs to be unique across the `mybluemix.net` domain.
 
-    ---
-    applications:
-    - name: tmp-app
-      host: tmp-app-pjm
-      memory: 128M
-      command: node node_modules/.bin/cf-hoodie start
-      services:
-      - hoodie-data
-      - hoodie-admin
+      ---
+      applications:
+      - name: tmp-app
+        host: tmp-app-pjm
+        memory: 128M
+        command: node node_modules/.bin/cf-hoodie start
+        services:
+        - hoodie-data
+        - hoodie-admin
 
 * push the app
 
-    $ cf push
+      $ cf push
 
 * associate an admin route to the app
 
-    $ cf map-route tmp-app mybluemix.net -n tmp-app-pjm-admin
+      $ cf map-route tmp-app mybluemix.net -n tmp-app-pjm-admin
 
 * visit the hoodie site at <http://tmp-app-pjm.mybluxmix.net> and the
   admin site at <http://tmp-app-pjm-admin.mybluxmix.net>
@@ -114,10 +114,3 @@ license
 Apache License, Version 2.0
 
 <http://www.apache.org/licenses/LICENSE-2.0.html>
-
-<!-- ================ -->
-
-[flickr]:                       http://flickr.com
-[flickr api key]:               https://www.flickr.com/services/apps/
-[user-provided service]:        http://docs.cloudfoundry.org/devguide/services/user-provided.html
-[github webooks documentation]: https://developer.github.com/webhooks/
