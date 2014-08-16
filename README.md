@@ -24,9 +24,13 @@ quick start - run on Bluemix
 
   `$ npm install cf-hoodie --save`
 
-* create a CouchDB service named `hoodie-data`
+* create a CouchDB service named `hoodie-data`; note that you can't use
+  Cloudant since hood.ie requires CouchDB >= 1.2.
+  [Iris Couch](https://www.iriscouch.com/) works fine.  Provide the
+  account URL including the userid/password in the form
+  `https://userid:password@hostname:port`
 
-  `$ cf create-service cloudantNoSQLDB Shared hoodie-data`
+  `$ cf create-user-provided-service hoodie-data -p url`
 
 * create a user-provided service named `hoodie-admin`
 
@@ -39,7 +43,7 @@ quick start - run on Bluemix
       applications:
       - name: tmp-app
         host: tmp-app-pjm
-        memory: 128M
+        memory: 512M
         command: node node_modules/.bin/cf-hoodie start
         services:
         - hoodie-data
